@@ -14,65 +14,98 @@
 
       <div id="header-wrapper">
       <div id="avatar">
-      <img src="me.jpeg" alt="" width="100" />
+      <img src="anca.jpeg" alt="" width="100" />
       </div>
 
       <div id="header-info">
         <h1>Anca Ioana Pidmaliski</h1>
-        <p id="motto"><span>Web</span> Development cursant</p>
+        <h2>Cursant la FastTrackIT</h2>
       </div>
       </div>
       
       <ul id="top-menu-bar">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Skills</a></li>
-        <li><a href="#">Project</a></li>
-        <li><a href="#">Languages</a></li>
+        <li><a href="#" onclick="showPage('home')">Home</a></li>
+        <li><a href="#" onclick="showPage('about')">About</a></li>
+        <li><a href="#" onclick="showPage('skills')">Skills</a></li>
+        <li><a href="#" onclick="showPage('education')">Education</a></li>
+        <li><a href="#" onclick="showPage('projects')">Projects</a></li>
+        <li><a href="#" onclick="showPage('languages')">Languages</a></li>
       </ul>
     </header>
 
     <section id="content">
-      <div id="side-menu">
 
-        <section>
-          <form action="" method="get">
-            <label for="userEmail">Email:</label>
-            <input
-              id="userEmail"
-              required="required"
-              name="email"
-              type="email"
-              placeholder="contact@fasttrackit"/>
-            <button type="submit">Contact me</button>
-          </form>
-        </section>
+        <div id="side-menu">
+          <section>
+            <h2>CONTACT FORM</h2>
+            <form action="" id="contact-form">
+              <div class="form-row">
+                <label for="e">Email</label>
+                <input type="email" id="e" name="em" placeholder="example@job.com">
+              </div>
+              <div class="form-row">
+                <label for="contactName">Name</label>
+                <input type="text" id="contactName" name="nume" placeholder="insert your name here ">
+              </div>
+              <div class="actions">
+                <button type="submit">Contact Us</button>
+              </div>
+            </form>
+          </section>
+        </div>
 
-        <section>Phone number:</section>
+    
       </div>
 
       <div id="main">
+        <div id="home" class="page">
+          <h2>HOME</h2>
+          <p>Introduction</p>
+          <p>I've always had a soft spot for technology and all things
+            that have to do with computers which is why I headed towards
+            the programming world, hoping I can dive in a little deeper
+            into the technology land.  </p>
+            
 
-        <div class="page">
-          <h2>Home</h2>
-          <p>about me</p>
-        </div>
+      </div>
 
-        <div class="page">
+      <div id="about" class="page">
+        <h2>About</h2>
+        <ul>
+          <li>Makeup</li>
+          <li>Fashion styling</li>
+          <li>Interior design</li>
+          <li>Arts & crafts</li>
+        </ul>
+      </div>
+
+
+        <div id="skills" class="page">
           <h2>SKILLS</h2>
           <ul>
-            <li class="favorite">HTML</li>
+            <li>HTML</li>
             <li>CSS</li>
-            <li class="favorite">JS</li>
+            <li>JS</li>
           </ul>
         </div>
-        
-        <div class="page">
-          <h2>Projects</h2>
+
+        <div id="education" class="page">
+          <h2>EDUCATION</h2>
+          <ul>
+            <li>Liceul Pedagogic Deva</li>
+            <li>Universitatea din  Oradea</li>
+            <li>Universitatea de Stiinte Agricole si Medicina Veterinara</li>
+          </ul>
         </div>
 
-        <div class="page">
-            <h2>KNOWN LANGUAGES</h2>
-            <table border="1">
+      <div id="projects" class="page">
+        <h2>PROJECTS</h2>
+        <p>Work in progress... -_- </p>
+      </div>
+
+        <div id="languages" class="page">
+            <h2>LANGUAGES</h2>
+            <table border="2">
             <tr>
                 <td>English</td>
                 <td>C2</td>
@@ -82,7 +115,7 @@
                 <td>C1</td>
             </tr>
             <tr>
-                <td>French</td>
+                <td>German</td>
                 <td>B1</td>
             </tr>
 
@@ -93,9 +126,11 @@
     </section>
 
     <footer>
-      <p><a href="https://github.com/nmatei">GitHub</a> 2022</p>
+      <a target="_blank" href="https://ro.linkedin.com/">Linkedin</a> 
+      </p>
     </footer>
 
     <script src="index.js"></script>
   </body>
 </html>
+

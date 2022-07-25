@@ -6,13 +6,15 @@ body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background: #f6f5ff;
+    background-color: rgb(227, 242, 255);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #content {
     flex: 1;
     display:flex;
     justify-content:row;
+    margin-top: 1.6rem;
 }
 
 #side-menu {
@@ -22,24 +24,54 @@ body{
     flex: 3;
 }
 
-#header-wrappeer{
+
+#header-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
+#avatar {
+    padding: 5px;
+    width: 90px;
+    height: 90px;
+
+}
+
+#avatar img {
+border-radius: 50%;
+border: 4px solid lightcoral;
+
+}
+    
+   
 #header-info {
     flex: 1;
+    padding: 10px;
+    
 }
+
+
+
 
 h1{
-    margin-bottom: 10px;
+    margin: 5px;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
 }
 
 
 
 
-p {
-    color:#2196F3;
+h2 {
+    color: lightcoral;
+    text-align: center;
 }
 
 /* p sau a sau li, inseamna toate elementele din html selectate */
@@ -63,9 +95,11 @@ p {
 }
 
 #top-menu-bar {
+    margin: 0;
     text-align: center;
-    background-color: #0c5bab;
+    background-color: cornflowerblue;
     color: #fff;
+    
 }
 
 #top-menu-bar li{
@@ -76,8 +110,12 @@ p {
 
 #top-menu-bar a{
     text-decoration:none;
-    padding: 0 15px;
+    padding: 5px 15px 5px 15px;
+    margin: 4px;
     color: #fff;
+    display: inline-block;
+    border-radius: 0.2em;
+    transition: 0.5s;
 }
 
 #top-menu-bar a:visited {
@@ -85,22 +123,62 @@ p {
 }
 
 #top-menu-bar a:hover {
-    color: #334455;
+    color: lightcoral;
     background: #f0e8fc;
 }
 
-.page {
-    background: #fff;
-    border-radius: 0.5rem;
-    margin-bottom: 1.6rem;
+
+#side-menu > section { 
+    
+    margin-bottom: 10px;
     padding: 1.6rem;
-    box-shadow: 0 4px 8 px rgb(red, green, blue);
+    box-shadow: rgb(160, 178, 244);
+    border-radius: 0.7rem;
+    background-color: #fef4f4;
+}
+
+
+#side-menu {
+    flex: 1;
+    padding: 10px 5px 5px 10px;
+
+}
+    
+#side-menu > section { 
+    
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0 0 0 1px rgba(68, 102, 239, 0.15), 0 2px 3px rgb(0 0 0 / 20%);
+    border-radius: 2px;
+}
+
+ 
+
+
+.page {
+    background: #fef4f4;
+    border-radius: 0.7rem;
+    margin-bottom: 1.6rem;
+    margin-right: 1.6rem;
+    margin-left: 1.6rem;
+    padding: 1.6rem;
+    box-shadow: 0 0 0 1px rgba(41, 125, 249, 0.15), 0 2px 3px rgb(0 0 0 / 20%);
+
 
 }
 
 
 .page h2 {
     margin-top: 0%;
+}
+
+#footer {
+    flex: 1;
+    min-height: 10px;
+    padding: 0px;
+    text-align: center;
+    background-color: lightcoral;
+    cursor: pointer;
 }
 
 
