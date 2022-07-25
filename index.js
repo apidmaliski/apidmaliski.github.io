@@ -3,48 +3,40 @@
 // console.warn(6 * 3 - 10);
 // console.error("started");
 
-var myName = 'Anca';
+var myName = "Anca";
 var myAge = 30;
 
-console.info("My name is " + myName + ", I'm " + myAge + ' years old');
+console.info("My name is " + myName + ", I'm " + myAge + " years old");
 myAge = 30;
-console.info("My name is " + myName + ", I'm " + myAge + ' years old');
+console.info("My name is " + myName + ", I'm " + myAge + " years old");
 myAge = 31;
-console.info("My name is " + myName + ", I'm " + myAge + ' years old');
+console.info("My name is " + myName + ", I'm " + myAge + " years old");
 
 var jobTitle = "Analist servicii client";
 
 var mottoElement = document.getElementById("motto");
 
 console.info(mottoElement);
-console.warn(mottoElement.innerHTML);
+//console.warn(mottoElement.innerHTML);
 // mottoElement.innerHTML = mottoElement.innerHTML +  " & " + jobTitle;
-mottoElement.innerHTML += " & " + jobTitle;
+//mottoElement.innerHTML += " & " + jobTitle;
 
-function hide(id){
-document.getElementById(id).style.display = "none";
+function hide(id) {
+  document.getElementById(id).style.display = "none";
 }
 
-function show(id){
+function show(id) {
   document.getElementById(id).style.display = "block";
-
 }
 
-function hideAllPages(){
-  hide("home");
-  hide("about");
-  hide("skills");
-  hide("education");
-  hide("projects");
-  hide("languages");
+var activePage = "home";
+
+function showPage(nextPage) {
+  hide(activePage);
+  show(nextPage);
+  document.getElementById("menu-" + activePage).classList.remove("active");
+  document.getElementById("menu-" + nextPage).classList.add("active");
+  activePage = nextPage;
 }
 
-
-
-
-function showPage(id){
-  hideAllPages();
-  show(id);
-}
-
-showPage("home");
+showPage(activePage);

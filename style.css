@@ -127,6 +127,11 @@ h2 {
     background: #f0e8fc;
 }
 
+#top-menu-bar a.active {
+    color:black;
+    background: lightcoral;
+}
+
 
 #side-menu > section { 
     
