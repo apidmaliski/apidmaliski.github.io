@@ -68,6 +68,16 @@ function displaySkills() {
     { name: "css", endorsements: 5 },
     { name: "js", endorsements: 10 },
   ];
+  skills.sort(function (a, b) {
+    //return b.endorsements - a.endorsements; va face 15,10,5
+    //if (a.name.toLowerCase() < b.name.toLowerCase()) {
+    //return -1;
+    //}
+    //if (a.name.toLowerCase() > b.name.toLowerCase()) {
+    //return 1;
+    //}
+    //return 0;
+  });
   console.info(skills);
   for (var i = 0; i < skills.length; i++) {
     //ul.innerHTML = ul.innerHTML + `<li>${skills[i]}</li>`;
