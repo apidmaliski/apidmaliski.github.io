@@ -56,20 +56,16 @@ function initEvents() {
 showPage(activePage);
 initEvents();
 
-function displaySkills() {
+function displaySkills(skills) {
   // initializare; conditie; post exec
   //for (var i = 1; i < 5; i++) {
   //console.info(`${i} * 5 = ${i * 5}`);
   //}
 
   var ul = document.querySelector(`#skills ul`);
-  var skills = [
-    { name: "html", endorsements: 15 },
-    { name: "css", endorsements: 5 },
-    { name: "js", endorsements: 10 },
-  ];
+
   skills.sort(function (a, b) {
-    //return b.endorsements - a.endorsements; va face 15,10,5
+    return b.endorsements - a.endorsements; //va face 15,10,5
     //if (a.name.toLowerCase() < b.name.toLowerCase()) {
     //return -1;
     //}
@@ -85,4 +81,13 @@ function displaySkills() {
   }
 }
 
-displaySkills();
+function loadSkills() {
+  fetch("skills.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (serverSkills) {
+      displaySkills(serverSkills);
+    });
+}
+loadSkills();
